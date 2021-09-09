@@ -1,0 +1,22 @@
+<title> Expiry Date </title>
+<body style="background-color:#a9e1f1;">
+    <center><p><h1>Barcode ({{barcode}}) successfully scanned! ✌️</h1></p>
+    </center>
+    <br>
+    <br>
+        <form method = "POST" action ="/input">
+        <p style="font-size:18px;">Please enter the <strong>expiry date</strong>: </p>
+        <input type = "date" name = "expiry_date" />
+        <input type = "hidden" name = barcode value = "{{barcode}}" />
+        <br>
+        <p style="font-size:18px;">Please enter the <strong>purchase date</strong>: </p>
+        <input type = "date" name = "purchase_date" value= "{{todays_date}}" min="1997-01-01" max="2050-12-31" />
+        <p style="font-size:18px;">Please enter your <strong>doctor's instructions</strong>: </p>
+        <textarea name = "doctor_instructions"></textarea> 
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Submit" />
+    </form>
+    
+    <!-- Retrieving the barcode number and hiding it from the interface. Creating the various input sections for "purchase date", "expiry date" and "doctor's instructions" -->
